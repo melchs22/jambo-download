@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Télécharger Jambo Driver</title>
+  <meta name="description" content="Téléchargez l'application conducteur Jambo sur Android ou iOS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: linear-gradient(135deg, #fff7f1 0%, #f5f5f5 100%);
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      color: #1a1a1a;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 48px 36px 40px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .logo {
+      width: 132px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #ffe8df;
+      color: #c64516;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #eee;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 16px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      margin-bottom: 12px;
+    }
+
+    .btn:active { transform: scale(0.97); }
+
+    .btn-android {
+      background: #E5362C;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(229,54,44,0.3);
+    }
+
+    .btn-ios {
+      background: #111111;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+
+    .btn-icon { width: 26px; height: 26px; flex-shrink: 0; }
+    .btn-label { display: flex; flex-direction: column; align-items: flex-start; }
+    .btn-sub { font-size: 0.68rem; font-weight: 500; opacity: 0.78; line-height: 1; margin-bottom: 2px; }
+    .btn-name { font-size: 1rem; font-weight: 800; line-height: 1; }
+
+    body.os-android .btn-android { display: flex; }
+    body.os-ios     .btn-ios     { display: flex; }
+    body.os-other   .btn-android { display: flex; }
+    body.os-other   .btn-ios     { display: flex; }
+
+    .note {
+      font-size: 0.82rem;
+      color: #888;
+      margin-top: 8px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 440px) {
+      .card { padding: 36px 20px 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="../jambo-logo.png" alt="Jambo logo" class="logo" />
+    <span class="pill">Pour chauffeurs</span>
+    <h1>Bienvenue sur Jambo Driver</h1>
+    <p class="tagline">Gérez vos courses en toute simplicité.<br>Téléchargez l'application conducteur sur votre appareil.</p>
+
+    <div class="divider"></div>
+
+    <a href="https://play.google.com/store/apps/details?id=com.driver.jambo&pcampaignid=web_share" class="btn btn-android" target="_blank" rel="noopener">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.51 23.49a1.84 1.84 0 0 0 2-.2L17.3 15.8l-2.82-2.82L3.51 23.49Z" fill="white"/>
+        <path d="M20.97 9.8 17.8 8.1l-3.13 3.13 3.13 3.13 3.17-1.7a1.75 1.75 0 0 0 0-2.86Z" fill="white" opacity=".8"/>
+        <path d="M3.51.51A1.84 1.84 0 0 0 2.4 2.1v19.8l10.58-10.58L3.51.51Z" fill="white" opacity=".6"/>
+      </svg>
+      <span class="btn-label">
+        <span class="btn-sub">Disponible sur</span>
+        <span class="btn-name">Google Play</span>
+      </span>
+    </a>
+
+    <a href="https://apps.apple.com/us/app/jambo-driver/id6746534270" class="btn btn-ios" target="_blank" rel="noopener">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.39-1.32 2.76-2.53 3.99ZM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25Z"/>
+      </svg>
+      <span class="btn-label">
+        <span class="btn-sub">Télécharger sur l'</span>
+        <span class="btn-name">App Store</span>
+      </span>
+    </a>
+
+    <p class="note">Les boutons ci-dessus s’adaptent automatiquement à votre appareil.</p>
+  </div>
+
+  <script>
+    (function () {
+      const ua = navigator.userAgent || '';
+      const isAndroid = /android/i.test(ua);
+      const isIOS = /iphone|ipad|ipod/i.test(ua) ||
+                    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+      if (isAndroid) {
+        document.body.classList.add('os-android');
+      } else if (isIOS) {
+        document.body.classList.add('os-ios');
+      } else {
+        document.body.classList.add('os-other');
+      }
+    })();
+  </script>
+</body>
+</html>
