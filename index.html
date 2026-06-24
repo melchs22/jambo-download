@@ -55,7 +55,29 @@
       margin-bottom: 14px;
       text-align: left;
       background: #fcfcfc;
+      position: relative;
+      overflow: hidden;
     }
+    .choice.passenger {
+      background: linear-gradient(135deg, #fff5f4 0%, #fefefe 100%);
+      border-color: #ffd9d3;
+    }
+    .choice.driver {
+      background: linear-gradient(135deg, #f7f7f7 0%, #fefefe 100%);
+      border-color: #e2e2e2;
+    }
+    .choice-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 8px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    .choice-badge.passenger { background: #ffe8df; color: #c64516; }
+    .choice-badge.driver { background: #f0f0f0; color: #333; }
     .choice-title {
       font-size: 1rem;
       font-weight: 800;
@@ -93,6 +115,12 @@
       margin-top: 10px;
       line-height: 1.45;
     }
+    .os-note {
+      font-size: 0.84rem;
+      color: #666;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
     @media (max-width: 440px) {
       .card { padding: 28px 16px 24px; }
     }
@@ -104,8 +132,10 @@
     <span class="pill">Télécharger l'app</span>
     <h1>Choisissez votre application</h1>
     <p class="tagline">Sélectionnez la version adaptée à votre profil pour télécharger rapidement Jambo.</p>
+    <p id="device-note" class="os-note">Détection automatique de votre appareil…</p>
 
-    <div class="choice">
+    <div class="choice passenger">
+      <div class="choice-badge passenger">Passager</div>
       <div class="choice-title">Passager</div>
       <div class="choice-desc">Réservez et voyagez facilement avec Jambo Passenger.</div>
       <a id="passenger-btn" class="btn btn-passenger" href="#" target="_blank" rel="noopener">
@@ -118,7 +148,8 @@
       </a>
     </div>
 
-    <div class="choice">
+    <div class="choice driver">
+      <div class="choice-badge driver">Chauffeur</div>
       <div class="choice-title">Chauffeur</div>
       <div class="choice-desc">Gérez vos courses et recevez vos trajets avec Jambo Driver.</div>
       <a id="driver-btn" class="btn btn-driver" href="#" target="_blank" rel="noopener">
@@ -143,23 +174,29 @@
       const driverBtn = document.getElementById('driver-btn');
       const passengerLabel = document.getElementById('passenger-label');
       const driverLabel = document.getElementById('driver-label');
+      const deviceNote = document.getElementById('device-note');
+
+      let storeName = 'Google Play';
+      let storeLabel = 'Télécharger sur Google Play';
+      let passengerLink = 'https://play.google.com/store/apps/details?id=com.rider.jambo&pcampaignid=web_share';
+      let driverLink = 'https://play.google.com/store/apps/details?id=com.driver.jambo&pcampaignid=web_share';
 
       if (isAndroid) {
-        passengerBtn.href = 'https://play.google.com/store/apps/details?id=com.rider.jambo&pcampaignid=web_share';
-        driverBtn.href = 'https://play.google.com/store/apps/details?id=com.driver.jambo&pcampaignid=web_share';
-        passengerLabel.textContent = 'Télécharger sur Google Play';
-        driverLabel.textContent = 'Télécharger sur Google Play';
+        deviceNote.textContent = 'Détection automatique : Android';
       } else if (isIOS) {
-        passengerBtn.href = 'https://apps.apple.com/us/app/jambo-taxi/id6746533829';
-        driverBtn.href = 'https://apps.apple.com/us/app/jambo-driver/id6746534270';
-        passengerLabel.textContent = "Télécharger sur l'App Store";
-        driverLabel.textContent = "Télécharger sur l'App Store";
+        storeName = 'App Store';
+        storeLabel = "Télécharger sur l'App Store";
+        passengerLink = 'https://apps.apple.com/us/app/jambo-taxi/id6746533829';
+        driverLink = 'https://apps.apple.com/us/app/jambo-driver/id6746534270';
+        deviceNote.textContent = 'Détection automatique : iPhone / iPad';
       } else {
-        passengerBtn.href = 'https://play.google.com/store/apps/details?id=com.rider.jambo&pcampaignid=web_share';
-        driverBtn.href = 'https://play.google.com/store/apps/details?id=com.driver.jambo&pcampaignid=web_share';
-        passengerLabel.textContent = 'Télécharger sur Google Play';
-        driverLabel.textContent = 'Télécharger sur Google Play';
+        deviceNote.textContent = 'Détection automatique : autre appareil';
       }
+
+      passengerBtn.href = passengerLink;
+      driverBtn.href = driverLink;
+      passengerLabel.textContent = storeLabel;
+      driverLabel.textContent = storeLabel;
     })();
   </script>
 </body>
