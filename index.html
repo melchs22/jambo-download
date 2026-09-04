@@ -206,6 +206,28 @@
       driverBtn.href = driverLink;
       passengerLabel.textContent = storeLabel;
       driverLabel.textContent = storeLabel;
+
+      const platform = isAndroid ? 'android' : (isIOS ? 'ios' : 'other');
+
+      passengerBtn.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'app_download_click', {
+            app_type: 'passenger',
+            platform: platform,
+            store: storeName
+          });
+        }
+      });
+
+      driverBtn.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'app_download_click', {
+            app_type: 'driver',
+            platform: platform,
+            store: storeName
+          });
+        }
+      });
     })();
   </script>
 </body>
