@@ -1,234 +1,294 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jambo | Télécharger l'application</title>
-  <meta name="description" content="Choisissez l'application Jambo Passenger ou Jambo Driver sur Android ou iOS." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y74QG1168D"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jambo | Télécharger l'application</title>
+<meta name="description" content="Choisissez l'application Jambo Passenger ou Jambo Driver sur Android ou iOS." />
 
-    gtag('config', 'G-Y74QG1168D');
-  </script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      background: linear-gradient(135deg, #fff8f4 0%, #f5f5f5 100%);
-      min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px 16px;
-      color: #111;
-    }
-    .card {
-      background: #fff;
-      border-radius: 24px;
-      padding: 36px 24px 28px;
-      max-width: 460px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(17,17,17,0.11);
-    }
-    .logo { width: 132px; height: auto; margin-bottom: 16px; }
-    .pill {
-      display: inline-block;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: #ffe8df;
-      color: #c64516;
-      font-size: 0.8rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      letter-spacing: 0.02em;
-    }
-    h1 { font-size: 1.55rem; font-weight: 800; margin-bottom: 8px; }
-    .tagline {
-      color: #666;
-      font-size: 0.95rem;
-      line-height: 1.55;
-      margin-bottom: 22px;
-    }
-    .choice {
-      border: 1px solid #eee;
-      border-radius: 18px;
-      padding: 16px;
-      margin-bottom: 14px;
-      text-align: left;
-      background: #fcfcfc;
-      position: relative;
-      overflow: hidden;
-    }
-    .choice.passenger {
-      background: linear-gradient(135deg, #fff5f4 0%, #fefefe 100%);
-      border-color: #ffd9d3;
-    }
-    .choice.driver {
-      background: linear-gradient(135deg, #f7f7f7 0%, #fefefe 100%);
-      border-color: #e2e2e2;
-    }
-    .choice-badge {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 5px 8px;
-      border-radius: 999px;
-      margin-bottom: 8px;
-    }
-    .choice-badge.passenger { background: #ffe8df; color: #c64516; }
-    .choice-badge.driver { background: #f0f0f0; color: #333; }
-    .choice-title {
-      font-size: 1rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      color: #111;
-    }
-    .choice-desc {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      transition: transform 0.15s, box-shadow 0.15s;
-      border: none;
-      cursor: pointer;
-    }
-    .btn:active { transform: scale(0.97); }
-    .btn-passenger { background: #E5362C; color: #fff; box-shadow: 0 8px 20px rgba(229,54,44,0.25); }
-    .btn-driver { background: #111; color: #fff; box-shadow: 0 8px 20px rgba(17,17,17,0.16); }
-    .btn-icon { width: 22px; height: 22px; flex-shrink: 0; }
-    .note {
-      font-size: 0.82rem;
-      color: #888;
-      margin-top: 10px;
-      line-height: 1.45;
-    }
-    .os-note {
-      font-size: 0.84rem;
-      color: #666;
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-    @media (max-width: 440px) {
-      .card { padding: 28px 16px 24px; }
-    }
-  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y74QG1168D"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y74QG1168D');
+</script>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: linear-gradient(135deg, #fff8f4 0%, #f5f5f5 100%);
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  color: #111;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 36px 24px 28px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(17,17,17,0.11);
+}
+
+/* Logo: block-level, auto side margins, so it is always centered */
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 18px;
+}
+.logo {
+  display: block;
+  width: 132px;
+  max-width: 60%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.pill {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #ffe8df;
+  color: #c64516;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+h1 { font-size: 1.55rem; font-weight: 800; margin-bottom: 8px; }
+
+.tagline {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+.choice {
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+  text-align: left;
+  background: #fcfcfc;
+  position: relative;
+  overflow: hidden;
+}
+.choice.passenger {
+  background: linear-gradient(135deg, #fff5f4 0%, #fefefe 100%);
+  border-color: #ffd9d3;
+}
+.choice.driver {
+  background: linear-gradient(135deg, #f7f7f7 0%, #fefefe 100%);
+  border-color: #e2e2e2;
+}
+
+.choice-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.choice-badge.passenger { background: #ffe8df; color: #c64516; }
+.choice-badge.driver { background: #f0f0f0; color: #333; }
+
+.choice-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #111;
+}
+.choice-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.btn:active { transform: scale(0.97); }
+.btn-passenger { background: #E5362C; color: #fff; box-shadow: 0 8px 20px rgba(229,54,44,0.25); }
+.btn-driver { background: #111; color: #fff; box-shadow: 0 8px 20px rgba(17,17,17,0.16); }
+
+.btn-icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.btn-icon svg { width: 100%; height: 100%; display: block; }
+
+.note {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 10px;
+  line-height: 1.45;
+}
+.os-note {
+  font-size: 0.84rem;
+  color: #666;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 440px) {
+  .card { padding: 28px 16px 24px; }
+}
+</style>
 </head>
+
 <body>
-  <div class="card">
+<div class="card">
+  <div class="logo-wrap">
     <img src="jambo-logo.png" alt="Jambo logo" class="logo" />
-    <span class="pill">Télécharger l'app</span>
-    <h1>Choisissez votre application</h1>
-    <p class="tagline">Sélectionnez la version adaptée à votre profil pour télécharger rapidement Jambo.</p>
-    <p id="device-note" class="os-note">Détection automatique de votre appareil…</p>
-
-    <div class="choice passenger">
-      <div class="choice-badge passenger">Passager</div>
-      <div class="choice-title">Passager</div>
-      <div class="choice-desc">Réservez et voyagez facilement avec Jambo Passenger.</div>
-      <a id="passenger-btn" class="btn btn-passenger" href="#" target="_blank" rel="noopener">
-        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3.51 23.49a1.84 1.84 0 0 0 2-.2L17.3 15.8l-2.82-2.82L3.51 23.49Z" fill="white"/>
-          <path d="M20.97 9.8 17.8 8.1l-3.13 3.13 3.13 3.13 3.17-1.7a1.75 1.75 0 0 0 0-2.86Z" fill="white" opacity=".8"/>
-          <path d="M3.51.51A1.84 1.84 0 0 0 2.4 2.1v19.8l10.58-10.58L3.51.51Z" fill="white" opacity=".6"/>
-        </svg>
-        <span id="passenger-label">Télécharger sur Google Play</span>
-      </a>
-    </div>
-
-    <div class="choice driver">
-      <div class="choice-badge driver">Chauffeur</div>
-      <div class="choice-title">Chauffeur</div>
-      <div class="choice-desc">Gérez vos courses et recevez vos trajets avec Jambo Driver.</div>
-      <a id="driver-btn" class="btn btn-driver" href="#" target="_blank" rel="noopener">
-        <svg class="btn-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.39-1.32 2.76-2.53 3.99ZM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25Z"/>
-        </svg>
-        <span id="driver-label">Télécharger sur l'App Store</span>
-      </a>
-    </div>
-
-    <p class="note">Les boutons s’adaptent automatiquement à votre appareil.</p>
   </div>
 
-  <script>
-    (function () {
-      const ua = navigator.userAgent || '';
-      const isAndroid = /android/i.test(ua);
-      const isIOS = /iphone|ipad|ipod/i.test(ua) ||
-        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  <span class="pill">Télécharger l'app</span>
+  <h1>Choisissez votre application</h1>
+  <p class="tagline">Sélectionnez la version adaptée à votre profil pour télécharger rapidement Jambo.</p>
 
-      const passengerBtn = document.getElementById('passenger-btn');
-      const driverBtn = document.getElementById('driver-btn');
-      const passengerLabel = document.getElementById('passenger-label');
-      const driverLabel = document.getElementById('driver-label');
-      const deviceNote = document.getElementById('device-note');
+  <p id="device-note" class="os-note">Détection automatique de votre appareil…</p>
 
-      let storeName = 'Google Play';
-      let storeLabel = 'Télécharger sur Google Play';
-      let passengerLink = 'https://play.google.com/store/apps/details?id=com.rider.jambo&pcampaignid=web_share';
-      let driverLink = 'https://play.google.com/store/apps/details?id=com.driver.jambo&pcampaignid=web_share';
+  <div class="choice passenger">
+    <div class="choice-badge passenger">Passager</div>
+    <div class="choice-title">Passager</div>
+    <div class="choice-desc">Réservez et voyagez facilement avec Jambo Passenger.</div>
 
-      if (isAndroid) {
-        deviceNote.textContent = 'Détection automatique : Android';
-      } else if (isIOS) {
-        storeName = 'App Store';
-        storeLabel = "Télécharger sur l'App Store";
-        passengerLink = 'https://apps.apple.com/us/app/jambo-taxi/id6746533829';
-        driverLink = 'https://apps.apple.com/us/app/jambo-driver/id6746534270';
-        deviceNote.textContent = 'Détection automatique : iPhone / iPad';
-      } else {
-        deviceNote.textContent = 'Détection automatique : autre appareil';
-      }
+    <a id="passenger-btn" class="btn btn-passenger" href="#" target="_blank" rel="noopener">
+      <span id="passenger-icon" class="btn-icon" aria-hidden="true"></span>
+      <span id="passenger-label">Télécharger sur Google Play</span>
+    </a>
+  </div>
 
-      passengerBtn.href = passengerLink;
-      driverBtn.href = driverLink;
-      passengerLabel.textContent = storeLabel;
-      driverLabel.textContent = storeLabel;
+  <div class="choice driver">
+    <div class="choice-badge driver">Chauffeur</div>
+    <div class="choice-title">Chauffeur</div>
+    <div class="choice-desc">Gérez vos courses et recevez vos trajets avec Jambo Driver.</div>
 
-      const platform = isAndroid ? 'android' : (isIOS ? 'ios' : 'other');
+    <a id="driver-btn" class="btn btn-driver" href="#" target="_blank" rel="noopener">
+      <span id="driver-icon" class="btn-icon" aria-hidden="true"></span>
+      <span id="driver-label">Télécharger sur Google Play</span>
+    </a>
+  </div>
 
-      passengerBtn.addEventListener('click', function () {
-        if (typeof gtag === 'function') {
-          gtag('event', 'app_download_click', {
-            app_type: 'passenger',
-            platform: platform,
-            store: storeName
-          });
-        }
+  <p class="note">Les boutons s’adaptent automatiquement à votre appareil.</p>
+</div>
+
+<script>
+(function () {
+  const ua = navigator.userAgent || '';
+  const isAndroid = /android/i.test(ua);
+  const isIOS = /iphone|ipad|ipod/i.test(ua) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+  const passengerBtn = document.getElementById('passenger-btn');
+  const driverBtn = document.getElementById('driver-btn');
+  const passengerLabel = document.getElementById('passenger-label');
+  const driverLabel = document.getElementById('driver-label');
+  const passengerIcon = document.getElementById('passenger-icon');
+  const driverIcon = document.getElementById('driver-icon');
+  const deviceNote = document.getElementById('device-note');
+
+  // Store logos (inline SVG, white)
+  const GOOGLE_PLAY_ICON =
+    '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+    '<path d="M3.51 23.49a1.84 1.84 0 0 0 2-.2L17.3 15.8l-2.82-2.82L3.51 23.49Z" fill="white"/>' +
+    '<path d="M3.51.51a1.84 1.84 0 0 1 2-.2L17.3 8.2l-2.82 2.82L3.51.51Z" fill="white" opacity=".9"/>' +
+    '<path d="M20.97 9.8 17.8 8.1l-3.13 3.13 3.13 3.13 3.17-1.7a1.75 1.75 0 0 0 0-2.86Z" fill="white" opacity=".8"/>' +
+    '<path d="M3.51.51A1.84 1.84 0 0 0 2.4 2.1v19.8l10.58-10.58L3.51.51Z" fill="white" opacity=".6"/>' +
+    '</svg>';
+
+  const APP_STORE_ICON =
+    '<svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">' +
+    '<path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.39-1.32 2.76-2.53 3.99ZM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25Z"/>' +
+    '</svg>';
+
+  // Defaults: Google Play (Android and other devices)
+  let storeName = 'Google Play';
+  let storeLabel = 'Télécharger sur Google Play';
+  let storeIcon = GOOGLE_PLAY_ICON;
+  let passengerLink = 'https://play.google.com/store/apps/details?id=com.rider.jambo&pcampaignid=web_share';
+  let driverLink = 'https://play.google.com/store/apps/details?id=com.driver.jambo&pcampaignid=web_share';
+
+  if (isAndroid) {
+    deviceNote.textContent = 'Détection automatique : Android';
+  } else if (isIOS) {
+    storeName = 'App Store';
+    storeLabel = "Télécharger sur l'App Store";
+    storeIcon = APP_STORE_ICON;
+    passengerLink = 'https://apps.apple.com/us/app/jambo-taxi/id6746533829';
+    driverLink = 'https://apps.apple.com/us/app/jambo-driver/id6746534270';
+    deviceNote.textContent = 'Détection automatique : iPhone / iPad';
+  } else {
+    deviceNote.textContent = 'Détection automatique : autre appareil';
+  }
+
+  // Apply links, labels and the matching store logo to BOTH buttons
+  passengerBtn.href = passengerLink;
+  driverBtn.href = driverLink;
+  passengerLabel.textContent = storeLabel;
+  driverLabel.textContent = storeLabel;
+  passengerIcon.innerHTML = storeIcon;
+  driverIcon.innerHTML = storeIcon;
+
+  const platform = isAndroid ? 'android' : (isIOS ? 'ios' : 'other');
+
+  passengerBtn.addEventListener('click', function () {
+    if (typeof gtag === 'function') {
+      gtag('event', 'app_download_click', {
+        app_type: 'passenger',
+        platform: platform,
+        store: storeName
       });
+    }
+  });
 
-      driverBtn.addEventListener('click', function () {
-        if (typeof gtag === 'function') {
-          gtag('event', 'app_download_click', {
-            app_type: 'driver',
-            platform: platform,
-            store: storeName
-          });
-        }
+  driverBtn.addEventListener('click', function () {
+    if (typeof gtag === 'function') {
+      gtag('event', 'app_download_click', {
+        app_type: 'driver',
+        platform: platform,
+        store: storeName
       });
-    })();
-  </script>
+    }
+  });
+})();
+</script>
 </body>
 </html>
